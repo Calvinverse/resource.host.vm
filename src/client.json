@@ -1,0 +1,47 @@
+{
+    "bind_addr": "192.168.2.4",
+    "client_addr": "127.0.0.1",
+    "data_dir": "c:\\ops\\consul\\data",
+
+    "datacenter": "calvinverse-01",
+
+    "domain": "consulverse",
+
+    "encrypt": "n0LlbThdjJqROGokprQDpw==",
+
+    "ports": {
+        "dns": 53
+    },
+
+    "dns_config": {
+        "allow_stale": true,
+        "max_stale": "5s",
+        "node_ttl": "30s",
+        "service_ttl": {
+            "*": "30s"
+        }
+    },
+
+    "retry_join": [
+        "hashiserver-1.infrastructure.ad.calvinverse.net:8301",
+        "hashiserver-2.infrastructure.ad.calvinverse.net:8301",
+        "hashiserver-3.infrastructure.ad.calvinverse.net:8301",
+        "hashiserver-4.infrastructure.ad.calvinverse.net:8301",
+        "hashiserver-5.infrastructure.ad.calvinverse.net:8301"
+    ],
+    "retry_interval": "30s",
+
+    "recursors": [
+        "192.168.2.5",
+        "192.168.2.1"
+    ],
+
+    "disable_remote_exec": false,
+    "disable_update_check": false,
+
+    "log_level": "debug",
+
+    "telemetry": {
+        "statsd_address": "localhost:8125"
+    }
+}
